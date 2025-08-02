@@ -1,16 +1,18 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Scissors, Wrench, Utensils, Store, Home, Dumbbell } from 'lucide-react';
+import { HardHat, Wrench, Utensils, Store, Home, Dumbbell } from 'lucide-react';
 
 const Services = () => {
   const services = [
     {
-      icon: Scissors,
-      title: 'Salony Fryzjerskie i SPA',
-      description: 'Piękne strony z rezerwacją online i galerią usług.',
-      features: ['Rezerwacje Online', 'Galeria Usług', 'Profile Personelu'],
-      color: 'from-pink-500 to-rose-500',
+      icon: HardHat,
+      title: 'Firmy Budowlane',
+      description: 'Profesjonalne strony dla firm budowlanych z galerią projektów i formularzami kontaktowymi.',
+      features: ['Galeria Projektów', 'Formularz Wyceny', 'Certyfikaty i Licencje'],
+      color: 'from-orange-600 to-yellow-500',
+      link: 'https://building-web-five.vercel.app/', // You can change this to any URL
+      linkText: 'Zamów Stronę dla Firmy Budowlanej'
     },
     {
       icon: Wrench,
@@ -18,6 +20,8 @@ const Services = () => {
       description: 'Profesjonalne strony, które budują zaufanie i generują leady.',
       features: ['Katalog Usług', 'Zapytania o Wycenę', 'Certyfikaty'],
       color: 'from-blue-500 to-cyan-500',
+      link: '#contact', // You can change this to any URL
+      linkText: 'Zamów Stronę dla Warsztatu'
     },
     {
       icon: Utensils,
@@ -25,6 +29,8 @@ const Services = () => {
       description: 'Apetyczne strony z menu i zamówieniami online.',
       features: ['Menu Cyfrowe', 'Zamówienia Online', 'Rezerwacje'],
       color: 'from-orange-500 to-red-500',
+      link: '#contact', // You can change this to any URL
+      linkText: 'Zamów Stronę dla Restauracji'
     },
     /*{
       icon: Store,
@@ -83,7 +89,19 @@ const Services = () => {
                 ease: "easeOut"
               }}
               whileHover={{ y: -10 }}
-              className="group relative"
+              className="group relative cursor-pointer"
+              onClick={() => {
+                if (service.link.startsWith('#')) {
+                  // Smooth scroll to section
+                  const element = document.getElementById(service.link.slice(1));
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                } else {
+                  // Open external link
+                  window.open(service.link, '_blank');
+                }
+              }}
             >
               <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 h-full">
                 {/* Icon */}
@@ -100,7 +118,7 @@ const Services = () => {
                 </p>
 
                 {/* Features */}
-                <ul className="space-y-2">
+                <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <motion.li
                       key={feature}
@@ -119,8 +137,17 @@ const Services = () => {
                   ))}
                 </ul>
 
+                {/* Call to Action Button */}
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className={`w-full py-3 px-4 rounded-lg bg-gradient-to-r ${service.color} text-white text-center font-semibold text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0`}
+                >
+                  {service.linkText}
+                </motion.div>
+
                 {/* Hover Effect Overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300 rounded-2xl`} />
+                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300 rounded-2xl pointer-events-none`} />
               </div>
             </motion.div>
           ))}
