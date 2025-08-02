@@ -32,13 +32,13 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Telefon',
-      details: '(555) 123-4567',
+      details: '(+48) 453 425 473',
       color: 'from-blue-500 to-cyan-500',
     },
     {
       icon: Mail,
       title: 'Email',
-      details: 'kontakt@webcraftsolutions.com',
+      details: 'kontakt@webpartner.com',
       color: 'from-purple-500 to-indigo-500',
     },
     {
@@ -121,7 +121,7 @@ const Contact = () => {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="mt-12 p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20"
             >
-              <h4 className="text-xl font-bold mb-4 text-yellow-400">Dlaczego WebCraft?</h4>
+              <h4 className="text-xl font-bold mb-4 text-yellow-400">Dlaczego WebPartner?</h4>
               <ul className="space-y-3">
                 {[
                   'Specjalizacja branżowa',

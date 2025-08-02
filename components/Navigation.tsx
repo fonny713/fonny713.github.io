@@ -54,7 +54,7 @@ const Navigation = () => {
           >
             <Code2 className="h-8 w-8 text-blue-600" />
             <span className="text-xl font-bold gradient-text">
-              WebCraft
+              WebPartner
             </span>
           </motion.div>
 

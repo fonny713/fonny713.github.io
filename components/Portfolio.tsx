@@ -8,7 +8,7 @@ const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState('all');
 
   const projects = [
-    {
+   /* {
       id: 1,
       title: 'Studio Elegancji',
       category: 'salon',
@@ -17,7 +17,7 @@ const Portfolio = () => {
       icon: Scissors,
       color: 'from-pink-500 to-rose-500',
       tags: ['Salon Fryzjerski', 'Rezerwacje', 'Galeria'],
-    },
+    }, */
     {
       id: 2,
       title: 'Bistro Bella',
@@ -48,7 +48,7 @@ const Portfolio = () => {
       color: 'from-green-500 to-emerald-500',
       tags: ['E-commerce', 'Ręcznie Robione', 'Sklep'],
     }, */
-    {
+   /* {
       id: 5,
       title: 'SPA Zen',
       category: 'salon',
@@ -57,7 +57,7 @@ const Portfolio = () => {
       icon: Scissors,
       color: 'from-purple-500 to-indigo-500',
       tags: ['SPA', 'Wellness', 'Rezerwacje'],
-    },
+    }, */
     {
       id: 6,
       title: 'Pizzeria Tony\'ego',

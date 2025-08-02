@@ -43,7 +43,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2 mb-6">
               <Code2 className="h-8 w-8 text-blue-400" />
               <span className="text-2xl font-bold">
-                WebCraft <span className="text-blue-400">Solutions</span>
+                WebPartner <span className="text-blue-400">Solutions</span>
               </span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed max-w-md">
@@ -55,11 +55,11 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-300">(555) 123-4567</span>
+                <span className="text-gray-300">(+48) 453 425 473</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-300">kontakt@webcraftsolutions.com</span>
+                <span className="text-gray-300">kontakt@webpartner.com</span>
               </div>
             </div>
 
@@ -145,7 +145,7 @@ const Footer = () => {
           className="border-t border-gray-800 mt-12 pt-8 text-center"
         >
           <p className="text-gray-400">
-            © {currentYear} WebCraft Solutions. Wszelkie prawa zastrzeżone. Stworzone z ❤️ dla małych firm.
+            © {currentYear} WebPartner. Wszelkie prawa zastrzeżone. Stworzone z ❤️ dla małych firm.
           </p>
         </motion.div>
       </div>
