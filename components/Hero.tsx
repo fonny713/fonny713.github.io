@@ -173,7 +173,7 @@ const Hero = () => {
           >
             {[
               { number: '50+', label: 'Zbudowanych Stron' },
-              { number: '98%', label: 'Zadowolenie Klientów' },
+              { number: '98%', label: 'Zadowolenia Klientów' },
               { number: '24/7', label: 'Wsparcie' },
             ].map((stat, index) => (
               <motion.div

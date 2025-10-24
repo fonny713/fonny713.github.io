@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, Scissors, Utensils, Wrench, Store } from 'lucide-react';
+import { ExternalLink, Scissors, Utensils, Wrench, Store, ConstructionIcon, HardHat } from 'lucide-react';
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -20,13 +20,13 @@ const Portfolio = () => {
     }, */
     {
       id: 2,
-      title: 'Bistro Bella',
-      category: 'restaurant',
-      description: 'Strona restauracji z cyfrowym menu i zamówieniami',
-      image: 'restaurant',
-      icon: Utensils,
-      color: 'from-orange-500 to-red-500',
-      tags: ['Restauracja', 'Menu', 'Zamówienia'],
+      title: 'BuildWell',
+      category: 'construction',
+      description: 'Strona firmy budowlanej z galerią projektów',
+      image: 'construction',
+      icon: HardHat,
+      color: 'from-yellow-500 to-red-500',
+      tags: ['Budownictwo', 'Remonty', 'Usługi'],
     },
     {
       id: 3,
@@ -48,17 +48,17 @@ const Portfolio = () => {
       color: 'from-green-500 to-emerald-500',
       tags: ['E-commerce', 'Ręcznie Robione', 'Sklep'],
     }, */
-   /* {
+    {
       id: 5,
       title: 'SPA Zen',
       category: 'salon',
-      description: 'Relaksująca strona spa z rezerwacją zabiegów',
+      description: 'Profesjonalne spa z systemem rezerwacji',
       image: 'spa',
       icon: Scissors,
       color: 'from-purple-500 to-indigo-500',
       tags: ['SPA', 'Wellness', 'Rezerwacje'],
-    }, */
-    {
+    },
+    /*{
       id: 6,
       title: 'Pizzeria Tony\'ego',
       category: 'restaurant',
@@ -67,14 +67,15 @@ const Portfolio = () => {
       icon: Utensils,
       color: 'from-yellow-500 to-orange-500',
       tags: ['Pizza', 'Dostawa', 'Zamówienia Online'],
-    },
+    }, */
   ];
 
   const filters = [
     { id: 'all', label: 'Wszystkie Projekty' },
     { id: 'salon', label: 'Salony i SPA' },
-    { id: 'restaurant', label: 'Restauracje' },
+    //{ id: 'restaurant', label: 'Restauracje' },
     { id: 'mechanic', label: 'Warsztaty' },
+    { id: 'construction', label: 'Budownictwo' },
     //{ id: 'retail', label: 'Sklepy' },
   ];
 
@@ -148,7 +149,7 @@ const Portfolio = () => {
                 whileHover={{ y: -10 }}
                 className="group relative"
               >
-                <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+                <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col">
                   {/* Project Image/Preview */}
                   <div className={`h-64 bg-gradient-to-br ${project.color} relative overflow-hidden`}>
                     <div className="absolute inset-0 flex items-center justify-center">
@@ -177,16 +178,16 @@ const Portfolio = () => {
                   </div>
 
                   {/* Project Info */}
-                  <div className="p-6">
+                  <div className="p-6 flex-1 flex flex-col">
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
                       {project.title}
                     </h3>
-                    <p className="text-gray-600 mb-4 leading-relaxed">
+                    <p className="text-gray-600 mb-4 leading-relaxed flex-1">
                       {project.description}
                     </p>
 
                     {/* Tags */}
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 mt-auto">
                       {project.tags.map((tag) => (
                         <span
                           key={tag}

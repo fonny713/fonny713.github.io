@@ -17,7 +17,7 @@ const Services = () => {
     {
       icon: Wrench,
       title: 'Warsztaty Samochodowe',
-      description: 'Profesjonalne strony, które budują zaufanie i generują leady.',
+      description: 'Profesjonalne strony, które budują zaufanie i generują przychody.',
       features: ['Katalog Usług', 'Zapytania o Wycenę', 'Certyfikaty'],
       color: 'from-blue-500 to-cyan-500',
       link: '#contact', // You can change this to any URL
