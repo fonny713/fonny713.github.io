@@ -9,10 +9,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "WebCraft Solutions - Profesjonalne Tworzenie Stron Internetowych",
+  title: "Strony Internetowe dla Lokalnych Biznesów | StronaDlaWas",
   description: "Nowoczesne strony internetowe skoncentrowane na konwersji dla małych firm. Specjalizujemy się w salonach fryzjerskich, restauracjach, warsztatach i lokalnych firmach usługowych.",
   keywords: ["tworzenie stron internetowych", "strony dla małych firm", "strony dla salonów fryzjerskich", "strony dla restauracji", "strony dla warsztatów"],
-  authors: [{ name: "WebCraft Solutions" }],
+  authors: [{ name: "StronaDlaWas" }],
   viewport: "width=device-width, initial-scale=1",
   themeColor: "#2563eb",
 };

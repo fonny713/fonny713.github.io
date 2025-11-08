@@ -17,6 +17,7 @@ const Portfolio = () => {
       icon: Scissors,
       color: 'from-pink-500 to-rose-500',
       tags: ['Salon Fryzjerski', 'Rezerwacje', 'Galeria'],
+      link: 'https://example.com',
     }, */
     {
       id: 2,
@@ -27,6 +28,7 @@ const Portfolio = () => {
       icon: HardHat,
       color: 'from-yellow-500 to-red-500',
       tags: ['Budownictwo', 'Remonty', 'Usługi'],
+      link: 'https://building-web-five.vercel.app/', // Replace with actual URL
     },
     {
       id: 3,
@@ -37,6 +39,7 @@ const Portfolio = () => {
       icon: Wrench,
       color: 'from-blue-500 to-cyan-500',
       tags: ['Naprawa Aut', 'Usługi', 'Zaufanie'],
+      link: 'https://mechanic-web-mocha.vercel.app/', // Replace with actual URL
     },
   /*  {
       id: 4,
@@ -47,6 +50,7 @@ const Portfolio = () => {
       icon: Store,
       color: 'from-green-500 to-emerald-500',
       tags: ['E-commerce', 'Ręcznie Robione', 'Sklep'],
+      link: 'https://example.com',
     }, */
     {
       id: 5,
@@ -57,6 +61,7 @@ const Portfolio = () => {
       icon: Scissors,
       color: 'from-purple-500 to-indigo-500',
       tags: ['SPA', 'Wellness', 'Rezerwacje'],
+      link: 'https://spa-site-drab.vercel.app/', // Replace with actual URL
     },
     /*{
       id: 6,
@@ -67,6 +72,7 @@ const Portfolio = () => {
       icon: Utensils,
       color: 'from-yellow-500 to-orange-500',
       tags: ['Pizza', 'Dostawa', 'Zamówienia Online'],
+      link: 'https://example.com',
     }, */
   ];
 
@@ -135,8 +141,11 @@ const Portfolio = () => {
         >
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project, index) => (
-              <motion.div
+              <motion.a
                 key={project.id}
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 layout
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -147,7 +156,7 @@ const Portfolio = () => {
                   ease: "easeOut"
                 }}
                 whileHover={{ y: -10 }}
-                className="group relative"
+                className="group relative block cursor-pointer"
               >
                 <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col">
                   {/* Project Image/Preview */}
@@ -199,7 +208,7 @@ const Portfolio = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </motion.a>
             ))}
           </AnimatePresence>
         </motion.div>
